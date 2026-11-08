@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Мой кабинет · Финансовая свобода</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js?64"></script>
+  <script src="/static/app.js" defer></script>
+</head>
+<body data-mode="demo">
+  <main class="cabinet">
+    <div id="preview-banner" class="preview" hidden>Предпросмотр · пример, не данные клиента</div>
+    <header class="brand">
+      <span class="brand-mark" aria-hidden="true">ф.</span>
+      <span>Финансовая свобода<small>Личный кабинет</small></span>
+      <span class="private" title="Личный кабинет" aria-label="Личный кабинет">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></svg>
+      </span>
+    </header>
+    <section class="greeting" aria-live="polite">
+      <div class="eyebrow"><span></span> Рядом на каждом этапе</div>
+      <h1 id="greeting">Ваш личный<br>кабинет</h1>
+      <p id="intro">Загружаем информацию о вас и вашем юристе.</p>
+    </section>
+    <section class="lawyer-card" aria-labelledby="lawyer-heading">
+      <div class="card-label">Ваш юрист <span class="card-line"></span><span class="card-number">01</span></div>
+      <div class="lawyer-main">
+        <div id="avatar" class="avatar" aria-hidden="true">—</div>
+        <div class="lawyer-details">
+          <h2 id="lawyer-heading">Проверяем назначение</h2>
+          <p id="lawyer-role">Информация из вашей заявки</p>
+        </div>
+      </div>
+      <div class="card-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9S4 17 4 12V6l8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+        <p id="lawyer-note">Здесь появится ответственный за вашу заявку.</p>
+      </div>
+      <a id="lawyer-link" class="profile-link" target="_blank" rel="noopener noreferrer" hidden>Страница юриста <span aria-hidden="true">↗</span></a>
+    </section>
+    <div class="support-note"><span aria-hidden="true">✦</span><p>Всё начинается с первого шага.<br>Дальше — вместе с вашим юристом.</p></div>
+    <p id="error" class="error" role="alert" hidden></p>
+    <button id="retry" class="retry" hidden>Попробовать снова</button>
+    <button id="back" class="back">Вернуться в чат <span aria-hidden="true">↗</span></button>
+    <footer>Ваше спокойствие — наша общая цель.</footer>
+  </main>
+</body>
+</html>
